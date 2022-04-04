@@ -7,7 +7,7 @@ import Button from "./components/button";
 import LetterBox from "./components/letterbox";
 import WordBank from "./components/wordbank";
 
-interface LetterTypes {
+export interface LetterTypes {
   letter: string;
   index: number;
   atLocation?: boolean;
@@ -95,8 +95,19 @@ const App = () => {
         >
           Clear
         </Button>
+        <h2 className="text-xl font-bold text-center dark:text-white">
+          Exact Positions
+        </h2>
         <WordBank
-          allowedLetters={allowedLetters.map((x) => x.letter)}
+          allowedLetters={allowedLetters}
+          blockedLetters={blockedLetters.map((x) => x.letter)}
+          exactPlacement={true}
+        />
+        <h2 className="text-xl font-bold text-center dark:text-white">
+          Any Position
+        </h2>
+        <WordBank
+          allowedLetters={allowedLetters}
           blockedLetters={blockedLetters.map((x) => x.letter)}
         />
         {/**
