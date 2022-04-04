@@ -49,8 +49,8 @@ const App = () => {
   };
   // Center all content on the vertical axis
   return (
-    <div className="bg-slate-900 min-h-screen w-screen overflow-hidden flex flex-col content-center">
-      <div className="flex justify-center items-center flex-col space-y-4 my-auto">
+    <div className="flex flex-col content-center w-screen min-h-screen overflow-hidden bg-slate-900">
+      <div className="flex flex-col items-center justify-center my-auto space-y-4">
         <h1 className="text-5xl font-bold text-center dark:text-white">
           Wordle Solver
         </h1>

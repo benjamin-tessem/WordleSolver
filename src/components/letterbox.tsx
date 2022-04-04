@@ -13,7 +13,7 @@ const LetterBox: React.FC<LetterBoxProps> = ({ onChange, value }) => {
         /[a-zA-Z]/.test(event.target.value)) ||
       event.target.value.length === 0
     ) {
-      onChange(event.target.value);
+      onChange(event.target.value.toLocaleLowerCase());
     }
   };
 
@@ -22,7 +22,7 @@ const LetterBox: React.FC<LetterBoxProps> = ({ onChange, value }) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <input
-        className="bg-gray-800 text-white text-center text-xl font-bold border-2 border-gray-700 rounded-md w-10 h-10 md:w-20 md:h-20 uppercase m-2"
+        className="w-10 h-10 m-2 text-xl font-bold text-center text-white uppercase bg-gray-800 border-2 border-gray-700 rounded-md md:w-20 md:h-20"
         type="text"
         value={value}
         onChange={handleChange}

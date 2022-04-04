@@ -41,17 +41,17 @@ const WordBank: React.FC<WordBankProps> = ({
   if (isLoading) {
     // Create Skeleton for Loading
     return (
-      <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
-        <div className="animate-pulse flex space-x-4">
-          <div className="rounded-full bg-slate-700 h-10 w-10"></div>
-          <div className="flex-1 space-y-6 py-1">
-            <div className="h-2 bg-slate-700 rounded"></div>
+      <div className="w-full max-w-sm p-4 mx-auto border border-blue-300 rounded-md shadow">
+        <div className="flex space-x-4 animate-pulse">
+          <div className="w-10 h-10 rounded-full bg-slate-700"></div>
+          <div className="flex-1 py-1 space-y-6">
+            <div className="h-2 rounded bg-slate-700"></div>
             <div className="space-y-3">
               <div className="grid grid-cols-3 gap-4">
-                <div className="h-2 bg-slate-700 rounded col-span-2"></div>
-                <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+                <div className="h-2 col-span-2 rounded bg-slate-700"></div>
+                <div className="h-2 col-span-1 rounded bg-slate-700"></div>
               </div>
-              <div className="h-2 bg-slate-700 rounded"></div>
+              <div className="h-2 rounded bg-slate-700"></div>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ const WordBank: React.FC<WordBankProps> = ({
   return (
     // 4 Columns
     <div className="w-2/3 h-full">
-      <div className="rounded-md border-2 border-gray-700 text-white text-xl h-full flex">
+      <div className="flex h-full text-xl text-white border-2 border-gray-700 rounded-md">
         {(allowedLetters.length > 0 || blockedLetters.length > 0) &&
         words.length !== 0 ? (
           <div className="flex flex-auto h-full">
@@ -102,7 +102,7 @@ const WordBank: React.FC<WordBankProps> = ({
             </AutoSizer>
           </div>
         ) : (
-          <div className="m-2 flex align-middle justify-center content-center w-full">
+          <div className="flex content-center justify-center w-full m-2 align-middle">
             <div>
               <p>No Words Found</p>
             </div>
