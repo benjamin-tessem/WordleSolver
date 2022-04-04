@@ -63,7 +63,7 @@ const App = () => {
             Array.from(Array(5)).map((_, i) => (
               <LetterBox
                 key={i}
-                value={allowedLetters[i] ? allowedLetters[i].letter : ""}
+                value={allowedLetters.find((x) => x.index === i)?.letter ?? ""}
                 onChange={(val) => handleLetterChange(val, i)}
               />
             ))
